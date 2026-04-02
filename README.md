@@ -2,7 +2,7 @@
 
 This is the repository for the Pokémon FireRed and LeafGreen++ hack. Currently, this hack simply adds the Physical/Special Split to [Deokishisu's  Pokemon FireRed and LeafGreen+ ROM hack](https://github.com/Deokishisu/FRLG-Plus).
 
-Deokishisu's ROM hack serves to be the definitive way to experience FireRed/LeafGreen without departing too far from the vanilla experience. He provides many quality of life improvements from future games while adding several new Pokemon to the post-game in a way that seems natural.
+ Deokishisu's ROM hack serves to be the definitive way to experience FireRed/LeafGreen without departing from the quality and feel of the original games. He provides many quality of life improvements from future games while adding several new Pokemon to the post-game in a way that seems natural. 
 
 One of the core philosophies of Deokishisu's ROM Hack is that the battle system of generation 3 should remain untouched. That means that a move's category--whether move is considered physical or special--is completely determined by the move's type. This leaves many Pokémon, like Gengar and Gyarados, unable to fully utilize their STAB moves, which rely on the lower of their Attack or Special Attack stats.
 
