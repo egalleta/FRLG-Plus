@@ -10,7 +10,7 @@ Pokemon FireRed and LeafGreen++ builds off of the amazing work done by Deokishis
 
 ## How to play
 1. [**Download the patch**](https://github.com/egalleta/FRLG-Plus/releases/latest)
-2. Legally obtain a clean copy of Pokemon FireRed v1.0 (Sha1: dd5945db9b930750cb39d00c84da8571feebf417).
+2. Legally obtain a clean copy of Pokemon FireRed v1.0 (Sha1: 41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc).
 3. Apply the patch using an online patcher that is compatible with `.bps` files
 4. Enjoy!
 
