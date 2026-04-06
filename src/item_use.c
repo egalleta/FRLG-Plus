@@ -705,14 +705,14 @@ void FieldUseFunc_FlyMap(u8 taskId)
 {
     if (gTasks[taskId].data[3] == 0)
     {
-        ItemMenu_SetExitCallback(CB2_OpenFlyMap);
+        ItemMenu_SetExitCallback(UseFlyMapFromBag);
         ItemMenu_StartFadeToExitCallback(taskId);
     }
     else
     {
         StopPokemonLeagueLightingEffectTask();
         FadeScreen(FADE_TO_BLACK, 0);
-        gTasks[taskId].func = Task_UseTownMapFromField;
+        gTasks[taskId].func = Task_UseFlyMapFromField;
     }
 }
 
@@ -730,7 +730,7 @@ static void Task_UseFlyMapFromField(u8 taskId)
     if (!gPaletteFade.active)
     {
         CleanupOverworldWindowsAndTilemaps();
-        SetFieldCallback2ForItemUse();
+        // SetFieldCallback2ForItemUse();
         CB2_OpenFlyMap();
         // InitRegionMapWithExitCB(REGIONMAP_TYPE_NORMAL, CB2_ReturnToField);
         DestroyTask(taskId);
