@@ -64,6 +64,8 @@ static void RemoveUsedItem(void);
 static void Task_UsedBlackWhiteFlute(u8 taskId);
 static void ItemUseOnFieldCB_EscapeRope(u8 taskId);
 static void UseTownMapFromBag(void);
+static void Task_UseFlyMapFromField(u8 taskId);
+static void UseFlyMapFromBag(void);
 static void Task_UseTownMapFromField(u8 taskId);
 static void UseFameCheckerFromBag(void);
 static void Task_UseFameCheckerFromField(u8 taskId);
@@ -695,6 +697,42 @@ static void Task_UseTownMapFromField(u8 taskId)
         CleanupOverworldWindowsAndTilemaps();
         SetFieldCallback2ForItemUse();
         InitRegionMapWithExitCB(REGIONMAP_TYPE_NORMAL, CB2_ReturnToField);
+        DestroyTask(taskId);
+    }
+}
+
+void FieldUseFunc_FlyMap(u8 taskId)
+{
+    if (gTasks[taskId].data[3] == 0)
+    {
+        ItemMenu_SetExitCallback(CB2_OpenFlyMap);
+        ItemMenu_StartFadeToExitCallback(taskId);
+    }
+    else
+    {
+        StopPokemonLeagueLightingEffectTask();
+        FadeScreen(FADE_TO_BLACK, 0);
+        gTasks[taskId].func = Task_UseTownMapFromField;
+    }
+}
+
+static void UseFlyMapFromBag(void)
+{
+    //if(gMapHeader.regionMapSectionId <= 0x55) //MAPSEC_SKY_PILLAR
+        //InitRegionMapWithExitCB(REGIONMAP_TYPE_HOENN, CB2_BagMenuFromStartMenu);
+    //else
+        // InitRegionMapWithExitCB(REGIONMAP_TYPE_NORMAL, CB2_BagMenuFromStartMenu);
+        CB2_OpenFlyMap();
+}
+
+static void Task_UseFlyMapFromField(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        SetFieldCallback2ForItemUse();
+        CB2_OpenFlyMap();
+        // InitRegionMapWithExitCB(REGIONMAP_TYPE_NORMAL, CB2_ReturnToField);
         DestroyTask(taskId);
     }
 }

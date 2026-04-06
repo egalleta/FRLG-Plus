@@ -5845,7 +5845,7 @@
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
       "type": "ITEM_TYPE_BAG_MENU",
-      "fieldUseFunc": "FieldUseFunc_TownMap",
+      "fieldUseFunc": "FieldUseFunc_FlyMap",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0
